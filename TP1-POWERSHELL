@@ -1,0 +1,8 @@
+Write-Host "=== INFORMACION DE POWERSHELL ==="
+$PSVersionTable
+
+Write-Host "`n=== POLITICA DE EJECUCION ==="
+Get-ExecutionPolicy -List
+
+Write-Host "`n=== INFORMACION DEL SISTEMA OPERATIVO ==="
+Get-CimInstance Win32_OperatingSystem | Select-Object Caption, Version, OSArchitecture, BuildNumber, Manufacturer
